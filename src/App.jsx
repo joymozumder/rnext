@@ -4,6 +4,7 @@ import Counter from "./components/Counter"
 import Stats from "./components/Stats"
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "./features/counters/countersSlice";
+import Posts from "./components/Posts";
 
 function App() {
   const counters = useSelector((state)=> state.counters); //state = store's reducer: { counters: countersReducer, videos: videoReducer}
@@ -34,6 +35,8 @@ function App() {
             ))
           }
           <Stats totalCount={totalCount}/>
+
+          <Posts/>
         </div>
       </div>
       
